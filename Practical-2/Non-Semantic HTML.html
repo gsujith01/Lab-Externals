@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hospital</title>
+</head>
+<body>
+  <div class="top">
+    <div class="logo">CityCare Hospital</div>
+    <div class="menu">
+      <div onclick="location.href='#services'">Services</div>
+      <div onclick="location.href='#doctors'">Doctors</div>
+      <div onclick="location.href='#appointment'">Book</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div id="services">
+      <div class="heading">Our Services</div>
+      <div class="item"><b>Cardiology</b> - Heart care and diagnostics.</div>
+      <div class="item"><b>Orthopedics</b> - Bone and joint treatments.</div>
+      <div class="item"><b>Pediatrics</b> - Child healthcare.</div>
+    </div>
+
+    <div id="doctors">
+      <div class="heading">Our Doctors</div>
+      <div class="doc">
+        <div>Dr. Ananya Sharma - Cardiologist (12 yrs exp)</div>
+      </div>
+      <div class="doc">
+        <div>Dr. Vikram Rao - Orthopedic Surgeon (9 yrs exp)</div>
+      </div>
+    </div>
+
+    <div id="appointment">
+      <div class="heading">Book an Appointment</div>
+      <form>
+        <div>Name: <input type="text" placeholder="Full Name"></div>
+        <div>Email: <input type="text" placeholder="Email"></div>
+        <div>Phone: <input type="text" placeholder="Phone"></div>
+        <div>Department:
+          <select>
+            <option>Cardiology</option>
+            <option>Orthopedics</option>
+            <option>Pediatrics</option>
+          </select>
+        </div>
+        <div>Date: <input type="text" placeholder="DD/MM/YYYY"></div>
+        <div class="btn" onclick="this.parentElement.submit()">Submit</div>
+      </form>
+    </div>
+  </div>
+
+  <div class="bottom">Copyright 2026 CityCare Hospital</div>
+</body>
+</html>

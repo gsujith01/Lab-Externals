@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CityCare Hospital | Patient Appointment Management</title>
+  <style>
+    /* Minimal accessible focus & skip-link styles */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #003366;
+      color: #ffffff;
+      padding: 8px 12px;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    :focus-visible {
+      outline: 3px solid #005fcc;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>CityCare Hospital</h1>
+    <nav aria-label="Primary Navigation">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#doctors">Doctors</a></li>
+        <li><a href="#appointment">Book an Appointment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="services" aria-labelledby="services-heading">
+      <h2 id="services-heading">Hospital Services</h2>
+      <ul>
+        <li>
+          <h3>Cardiology</h3>
+          <p>Comprehensive heart care, ECG, and non-invasive diagnostics.</p>
+        </li>
+        <li>
+          <h3>Orthopedics</h3>
+          <p>Bone, joint, and sports injury treatments.</p>
+        </li>
+        <li>
+          <h3>Pediatrics</h3>
+          <p>Preventive and acute healthcare for infants and children.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="doctors" aria-labelledby="doctors-heading">
+      <h2 id="doctors-heading">Our Doctors</h2>
+      <article>
+        <h3>Dr. Ananya Sharma</h3>
+        <p>Cardiologist — 12 years of experience</p>
+      </article>
+      <article>
+        <h3>Dr. Vikram Rao</h3>
+        <p>Orthopedic Surgeon — 9 years of experience</p>
+      </article>
+    </section>
+
+    <section id="appointment" aria-labelledby="appointment-heading">
+      <h2 id="appointment-heading">Patient Appointment Form</h2>
+      <form action="/submit-appointment" method="post" aria-describedby="form-instructions">
+        <p id="form-instructions">Fields marked with an asterisk (*) are required.</p>
+
+        <fieldset>
+          <legend>Patient Information</legend>
+
+          <div>
+            <label for="patient-name">Full Name *</label>
+            <input
+              type="text"
+              id="patient-name"
+              name="patientName"
+              autocomplete="name"
+              required
+              minlength="2"
+            >
+          </div>
+
+          <div>
+            <label for="patient-email">Email Address *</label>
+            <input
+              type="email"
+              id="patient-email"
+              name="patientEmail"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="patient-phone">Phone Number *</label>
+            <input
+              type="tel"
+              id="patient-phone"
+              name="patientPhone"
+              autocomplete="tel"
+              pattern="[0-9]{10}"
+              aria-describedby="phone-hint"
+              required
+            >
+            <small id="phone-hint">Enter a 10-digit mobile number (e.g., 9876543210).</small>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Appointment Details</legend>
+
+          <div>
+            <label for="department">Department *</label>
+            <select id="department" name="department" required>
+              <option value="">-- Select a department --</option>
+              <option value="cardiology">Cardiology</option>
+              <option value="orthopedics">Orthopedics</option>
+              <option value="pediatrics">Pediatrics</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="appointment-date">Preferred Date *</label>
+            <input
+              type="date"
+              id="appointment-date"
+              name="appointmentDate"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="symptoms">Reason for Visit (Optional)</label>
+            <textarea
+              id="symptoms"
+              name="symptoms"
+              rows="3"
+              maxlength="300"
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit">Confirm Appointment</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CityCare Hospital. All rights reserved.</p>
+  </footer>
+</body>
+</html>

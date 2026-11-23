@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <a href="#main-content">Skip to main content</a>
+
+  <header>
+    <h1>University Student Activity Management Portal</h1>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#events">Upcoming Events</a></li>
+        <li><a href="#activities">University Activities</a></li>
+        <li><a href="#register">Event Registration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section id="events" aria-labelledby="events-heading">
+      <h2 id="events-heading">Upcoming Events</h2>
+
+      <article>
+        <h3>Annual Tech Hackathon 2026</h3>
+        <p><strong>Date:</strong> December 5, 2026 | <strong>Venue:</strong> Main Auditorium</p>
+        <p>A 24-hour coding challenge focused on AI, web development, and sustainable tech.</p>
+      </article>
+
+      <article>
+        <h3>Cultural Fest &amp; Music Night</h3>
+        <p><strong>Date:</strong> December 12, 2026 | <strong>Venue:</strong> Open Air Theatre</p>
+        <p>Join student bands, dance troupes, and art exhibitions across campus.</p>
+      </article>
+    </section>
+
+
+    <section id="register" aria-labelledby="register-heading">
+      <h2 id="register-heading">Student Event Registration</h2>
+
+      <form action="#" method="post">
+
+        <div>
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" name="full-name" required autocomplete="name">
+        </div>
+
+        <div>
+          <label for="student-id">Student ID:</label>
+          <input type="text" id="student-id" name="student-id" required>
+        </div>
+
+        <div>
+          <label for="email">University Email:</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+
+        <div>
+          <label for="event-select">Select Event:</label>
+          <select id="event-select" name="event" required>
+            <option value="">-- Choose an event --</option>
+            <option value="hackathon">Annual Tech Hackathon 2026</option>
+            <option value="cultural">Cultural Fest &amp; Music Night</option>
+            <option value="robotics">Robotics Workshop</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Year of Study</legend>
+          <input type="radio" id="year-1" name="year" value="1" required>
+          <label for="year-1">1st Year</label>
+
+          <input type="radio" id="year-2" name="year" value="2">
+          <label for="year-2">2nd Year</label>
+
+          <input type="radio" id="year-3" name="year" value="3">
+          <label for="year-3">3rd Year</label>
+
+          <input type="radio" id="year-4" name="year" value="4">
+          <label for="year-4">4th Year</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Areas of Interest</legend>
+          <input type="checkbox" id="int-coding" name="interests" value="coding">
+          <label for="int-coding">Coding &amp; AI</label>
+
+          <input type="checkbox" id="int-music" name="interests" value="music">
+          <label for="int-music">Music &amp; Arts</label>
+
+          <input type="checkbox" id="int-sports" name="interests" value="sports">
+          <label for="int-sports">Sports</label>
+        </fieldset>
+
+        <div>
+          <label for="comments">Additional Comments or Accessibility Needs:</label>
+          <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+        </div>
+
+        <button type="submit">Register for Event</button>
+      </form>
+    </section>
+
+    <aside id="activities" aria-labelledby="aside-heading">
+      <h2 id="aside-heading">Quick Announcements</h2>
+      <ul>
+        <li>Registration for the Hackathon closes on December 1.</li>
+        <li>Volunteers earn extra activity credits.</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 University Student Activity Management Portal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
