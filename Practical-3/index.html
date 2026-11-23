@@ -3,149 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QuickBite | Online Food Ordering & Restaurant Discovery</title>
+  <title>QuickBite - Food Ordering</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="#" class="brand">Quick<span>Bite</span></a>
-      <nav class="main-nav" aria-label="Primary Navigation">
-        <ul>
-          <li><a href="#categories">Categories</a></li>
-          <li><a href="#restaurants">Restaurants</a></li>
-          <li><a href="#offers">Offers</a></li>
-          <li><a href="#cart" class="btn-cart">Cart (2)</a></li>
-        </ul>
-      </nav>
-    </div>
+
+  <!-- Header with Flexbox -->
+  <header>
+    <div class="logo">QuickBite</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Restaurants</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">Cart</a></li>
+      </ul>
+    </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <section class="hero">
-      <h1>Discover Great Food Near You</h1>
-      <p>Fresh meals from top local kitchens delivered to your door.</p>
-    </section>
+    <h1>Popular Restaurants</h1>
 
-    <section id="categories" class="categories" aria-label="Food Categories">
-      <button type="button" class="chip active">All</button>
-      <button type="button" class="chip">Biryani</button>
-      <button type="button" class="chip">Pizza</button>
-      <button type="button" class="chip">South Indian</button>
-      <button type="button" class="chip">Burgers</button>
-      <button type="button" class="chip">Desserts</button>
-    </section>
-
-    <section id="restaurants" class="restaurant-section">
-      <h2>Popular Restaurants</h2>
-      <div class="restaurant-grid">
-        <div class="card-wrapper">
-          <article class="restaurant-card">
-            <div class="card-banner banner-1">
-              <span class="badge">4.6 ★</span>
-            </div>
-            <div class="card-body">
-              <h3>Spice Route Kitchen</h3>
-              <p class="cuisine">Hyderabadi Biryani, North Indian</p>
-              <div class="card-meta">
-                <span>25–30 min</span>
-                <span>₹300 for two</span>
-              </div>
-              <a href="#" class="btn-menu">View Menu</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="card-wrapper">
-          <article class="restaurant-card">
-            <div class="card-banner banner-2">
-              <span class="badge">4.5 ★</span>
-            </div>
-            <div class="card-body">
-              <h3>Crust &amp; Ember Pizzeria</h3>
-              <p class="cuisine">Wood-Fired Pizza, Pasta</p>
-              <div class="card-meta">
-                <span>20–25 min</span>
-                <span>₹450 for two</span>
-              </div>
-              <a href="#" class="btn-menu">View Menu</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="card-wrapper">
-          <article class="restaurant-card">
-            <div class="card-banner banner-3">
-              <span class="badge">4.8 ★</span>
-            </div>
-            <div class="card-body">
-              <h3>Dakshin Tiffin House</h3>
-              <p class="cuisine">Dosa, Idli, Filter Coffee</p>
-              <div class="card-meta">
-                <span>15–20 min</span>
-                <span>₹200 for two</span>
-              </div>
-              <a href="#" class="btn-menu">View Menu</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="card-wrapper">
-          <article class="restaurant-card">
-            <div class="card-banner banner-4">
-              <span class="badge">4.4 ★</span>
-            </div>
-            <div class="card-body">
-              <h3>Urban Smash Burgers</h3>
-              <p class="cuisine">Burgers, Fries, Shakes</p>
-              <div class="card-meta">
-                <span>25–35 min</span>
-                <span>₹350 for two</span>
-              </div>
-              <a href="#" class="btn-menu">View Menu</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="card-wrapper">
-          <article class="restaurant-card">
-            <div class="card-banner banner-5">
-              <span class="badge">4.7 ★</span>
-            </div>
-            <div class="card-body">
-              <h3>Wok &amp; Bowl Express</h3>
-              <p class="cuisine">Noodles, Dim Sum, Thai Curry</p>
-              <div class="card-meta">
-                <span>30–35 min</span>
-                <span>₹400 for two</span>
-              </div>
-              <a href="#" class="btn-menu">View Menu</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="card-wrapper">
-          <article class="restaurant-card">
-            <div class="card-banner banner-6">
-              <span class="badge">4.9 ★</span>
-            </div>
-            <div class="card-body">
-              <h3>Velvet Scoop Creamery</h3>
-              <p class="cuisine">Gelato, Waffles, Brownies</p>
-              <div class="card-meta">
-                <span>15–20 min</span>
-                <span>₹250 for two</span>
-              </div>
-              <a href="#" class="btn-menu">View Menu</a>
-            </div>
-          </article>
-        </div>
+    <!-- Restaurant Grid -->
+    <div class="restaurant-grid">
+      <div class="card">
+        <div class="card-img">Image 1</div>
+        <h2>Spice Garden</h2>
+        <p>Biryani, North Indian</p>
+        <p class="info">Rating: 4.5 | 30 mins</p>
+        <button>Order Now</button>
       </div>
-    </section>
+
+      <div class="card">
+        <div class="card-img">Image 2</div>
+        <h2>Pizza Hub</h2>
+        <p>Pizza, Pasta, Garlic Bread</p>
+        <p class="info">Rating: 4.3 | 25 mins</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">Image 3</div>
+        <h2>South Tiffins</h2>
+        <p>Dosa, Idli, Vada</p>
+        <p class="info">Rating: 4.7 | 20 mins</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">Image 4</div>
+        <h2>Burger Point</h2>
+        <p>Burgers, Fries, Cold Drinks</p>
+        <p class="info">Rating: 4.2 | 30 mins</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">Image 5</div>
+        <h2>Noodle House</h2>
+        <p>Noodles, Fried Rice, Manchurian</p>
+        <p class="info">Rating: 4.4 | 35 mins</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">Image 6</div>
+        <h2>Sweet Scoop</h2>
+        <p>Ice Cream, Cakes, Shakes</p>
+        <p class="info">Rating: 4.8 | 15 mins</p>
+        <button>Order Now</button>
+      </div>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 QuickBite Food Delivery. All rights reserved.</p>
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 QuickBite Food Delivery</p>
   </footer>
+
 </body>
 </html>
